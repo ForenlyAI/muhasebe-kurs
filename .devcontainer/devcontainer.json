@@ -1,0 +1,13 @@
+{
+  "name": "Muhasebe 101 — defter + görüntüleyici",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
+  "forwardPorts": [8680],
+  "portsAttributes": {"8680": {"label": "Muhasebe 101 — defter + görüntüleyici", "onAutoForward": "openBrowser"}},
+  "postCreateCommand": "pip install --user uv==0.8.17 && export PATH=$HOME/.local/bin:$PATH && ./kontrol.sh",
+  "postStartCommand": "nohup bash -c 'python3 -m http.server 8680 --bind 127.0.0.1 --directory goruntuleyici' > /tmp/lab-sunucu.log 2>&1 &",
+  "customizations": {
+    "vscode": {"extensions": ["ms-python.python"], "settings": {"workbench.startupEditor": "readme"}},
+    "codespaces": {"openFiles": ["README.md"]}
+  },
+  "hostRequirements": {"cpus": 2, "memory": "4gb"}
+}
