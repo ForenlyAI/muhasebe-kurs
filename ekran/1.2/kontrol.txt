@@ -1,0 +1,10 @@
+~/lab $ uv run --project araclar python defter/kontrol.py
+Dosya: kahve-duragi-2026-01.xlsx
+  GEÇTİ  K1 madde denkliği              15 madde, hepsi denk
+  GEÇTİ  K2 yevmiye toplamı             borç 1.030.400,00 · alacak 1.030.400,00
+  GEÇTİ  K3 mizan dengesi               hareket 1.030.400,00 = 1.030.400,00 · kalan 520.000,00 = 520.000,00
+  GEÇTİ  K4 bilanço denkliği            aktif 391.500,00 · pasif 391.500,00
+  GEÇTİ  K5 kitap içi kontrol hücreleri hepsi olumlu
+  GEÇTİ  K6 formül hataları             736 formül hesaplandı, hata yok
+  GEÇTİ  K7 çıpa (elle hesap)           22 değer tuttu
+SONUÇ: GEÇTİ

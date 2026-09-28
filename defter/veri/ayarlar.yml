@@ -1,0 +1,25 @@
+# Kahve Durağı (kurgusal) — çalışma kitabı ayarları. Her değerin kaynağı ve okunduğu tarih yazılıdır.
+# Kaynağı doğrulanmamış değer yalnız "ÖRNEK" etiketiyle kullanılır (planlama/ACIK-SORULAR.md).
+isletme:
+  unvan: "Kahve Durağı Ltd. Şti. (KURGUSAL)"
+  faaliyet: "kahve demleme ekipmanı satan küçük dükkân ve çevrim içi satış (kurgusal)"
+  vkn: "0000000000"            # kurgusal
+  adres: "Örnek Mah. Deneme Sok. No: 0, Eskişehir (kurgusal)"
+  telefon: "0222 000 00 00"
+  eposta: "defter@example.com"
+  defter_esasi: "bilanço esası — her türlü ticaret şirketi I. sınıf tüccardır (VUK md. 177/4)"
+donem: {baslangic: "2026-01-01", bitis: "2026-01-31", ad: "Ocak 2026 (ara dönem, öğrenme amaçlı)"}
+parametreler:
+  kdv_genel_oran:
+    deger: 0.20
+    etiket: "KDV genel oranı"
+    kaynak: "2007/13033 sayılı BKK md. 1/(a), 7346 sayılı Cumhurbaşkanı Kararı ile %18 → %20 (RG 7.7.2023, sayı 32241); GİB mevzuat sayfasında KDV oran kararlarının sonuncusu 9126 (RG 14.11.2024, yalnız liste değişikliği) — okundu 2026-09-25"
+    not: "Kahve Durağı'nın bütün alış/satışlarında genel oran uygulandığı VARSAYILDI; bir ürünün (I) ya da (II) sayılı listede olup olmadığı ders kapsamında belirlenmez"
+  dogrudan_gider_haddi:
+    deger: 12000
+    etiket: "Doğrudan gider yazma haddi (2026)"
+    kaynak: "VUK md. 313; 588 Sıra No.lu VUK Genel Tebliği ile 1.1.2026'dan geçerli tutar (RG 30.12.2025, sayı 33124 5. mükerrer) — mevzuat.gov.tr VUK metni, okundu 2026-09-25"
+  faydali_omur_ornek:
+    deger: 5
+    etiket: "Tezgâh ve raf sistemi faydalı ömrü (ÖRNEK)"
+    kaynak: "ÖRNEK — Hazine ve Maliye Bakanlığı amortisman listesindeki karşılığı bu kayıtta doğrulanmadı (ACIK-SORULAR Q7)"

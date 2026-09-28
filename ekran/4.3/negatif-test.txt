@@ -1,0 +1,8 @@
+~/lab $ uv run --project araclar python defter/kontrol.py --negatif
+Negatif test — bozuk kopyalar yakalanmalı:
+  GEÇTİ  Bir alacak tutarı yanlış yazıldı (madde 1: 300.000 → 30.000)
+         KALDI veren kontroller: K1 madde denkliği, K2 yevmiye toplamı, K3 mizan dengesi, K4 bilanço denkliği, K5 kitap içi kontrol hücreleri, K7 çıpa (elle hesap)
+  GEÇTİ  Hesap planında olmayan kod (madde 2: 100 → 101)
+         KALDI veren kontroller: K3 mizan dengesi, K4 bilanço denkliği, K5 kitap içi kontrol hücreleri, K7 çıpa (elle hesap)
+  GEÇTİ  Borç ve alacak yer değiştirdi (madde 10: tahsilat ters kaydedildi) — denklik bozulmaz
+         KALDI veren kontroller: K7 çıpa (elle hesap)

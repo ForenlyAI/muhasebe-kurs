@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bilanço — Kahve Durağı defter görüntüleyici</title>
+<style>
+:root { --zemin:#f6f3ee; --kagit:#ffffff; --cizgi:#d9d2c5; --baslik:#2b2622; --soluk:#6f675d; --vurgu:#8a5a2b;
+        --secili:#1f6feb; --ok:#1d7a3a; --ok-zemin:#e3f1e6; --hata:#b42318; --hata-zemin:#fde7e4; }
+* { box-sizing: border-box; }
+html, body { margin:0; height:100%; background:var(--zemin); color:var(--baslik);
+  font: 13px/1.35 "Arimo","DejaVu Sans",sans-serif; }
+header { display:flex; align-items:center; gap:14px; padding:10px 16px; background:#2b2622; color:#f6f3ee; }
+header .ad { font-weight:700; font-size:15px; letter-spacing:.2px; }
+header .dosya { font: 12px "DejaVu Sans Mono", monospace; color:#d8cfc2; }
+header .rozet { margin-left:auto; background:#c9772b; color:#fff; font-weight:700; font-size:11px; padding:3px 8px; border-radius:3px; }
+nav { display:flex; gap:2px; padding:6px 12px 0; background:#e9e3d8; border-bottom:1px solid var(--cizgi); overflow-x:auto; }
+nav a { padding:6px 12px; color:var(--baslik); text-decoration:none; border:1px solid transparent; border-bottom:none;
+  border-radius:4px 4px 0 0; white-space:nowrap; }
+nav a.aktif { background:var(--kagit); border-color:var(--cizgi); font-weight:700; color:var(--vurgu); }
+.formul { display:flex; align-items:stretch; border-bottom:1px solid var(--cizgi); background:var(--kagit); }
+.formul .ref { width:92px; padding:6px 10px; border-right:1px solid var(--cizgi); font: 12px "DejaVu Sans Mono", monospace; color:var(--soluk); }
+.formul .fx { padding:6px 8px; color:var(--soluk); font-style:italic; border-right:1px solid var(--cizgi); }
+.formul .icerik { flex:1; padding:6px 10px; font: 12.5px "DejaVu Sans Mono", monospace; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+main { height: calc(100% - 136px); overflow:auto; background:var(--kagit); }
+table { border-collapse:collapse; table-layout:fixed; }
+th { position:sticky; top:0; z-index:2; background:#efeae1; color:var(--soluk); font-weight:400; font-size:11px;
+  border:1px solid var(--cizgi); padding:2px 0; }
+th.no, td.no { position:sticky; left:0; z-index:1; width:40px; background:#efeae1; color:var(--soluk); text-align:center; font-size:11px; border:1px solid var(--cizgi); }
+th.no { z-index:3; }
+td { border:1px solid #ece6db; padding:3px 6px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; height:22px; cursor:cell; }
+td.s { text-align:right; font-variant-numeric: tabular-nums; }
+td.b { font-weight:700; }
+td.i { font-style:italic; color:var(--soluk); font-size:11.5px; }
+td.buyuk { font-size:17px; font-weight:700; }
+td.wrap { white-space:normal; }
+td.tasar { overflow:visible; position:relative; z-index:1; }
+td.ok { color:var(--ok); font-weight:700; background:var(--ok-zemin) !important; }
+td.hata { color:var(--hata); font-weight:700; background:var(--hata-zemin) !important; }
+td.f::after { content:""; }
+td.sec { outline:2px solid var(--secili); outline-offset:-2px; }
+td.vurgu { box-shadow: inset 0 0 0 9999px rgba(201,119,43,.14); }
+footer { position:fixed; bottom:0; left:0; right:0; padding:4px 16px; background:#e9e3d8; color:var(--soluk); font-size:11px; border-top:1px solid var(--cizgi); }
+</style></head>
+<body>
+<header><span class="ad">Kahve Durağı · defter görüntüleyici</span>
+<span class="dosya">kahve-duragi-2026-01.xlsx · md5 2a6b14670f</span><span class="rozet">KURGUSAL · EĞİTİM AMAÇLI</span></header>
+<nav><a href="bilgi.html">Bilgi</a><a href="hesap-plani.html">Hesap Planı</a><a href="yevmiye.html">Yevmiye</a><a href="buyuk-defter.html">Büyük Defter</a><a href="mizan.html">Mizan</a><a href="banka-ekstresi.html">Banka Ekstresi</a><a href="kdv.html">KDV</a><a href="stok.html">Stok</a><a href="amortisman.html">Amortisman</a><a href="gelir-tablosu.html">Gelir Tablosu</a><a href="bilanco.html" class="aktif">Bilanço</a><a href="takvim.html">Takvim</a></nav>
+<div class="formul"><div class="ref" id="ref">A1</div><div class="fx">fx</div><div class="icerik" id="icerik"></div></div>
+<main id="alan"><table style="width:863px"><colgroup><col style="width:40px"><col style="width:270px"><col style="width:114px"><col style="width:29px"><col style="width:296px"><col style="width:114px"></colgroup><thead><tr><th class="no"></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr></thead><tbody><tr><td class="no">1</td><td data-h="A1" class="b buyuk tasar">Bilanço — 31.01.2026 (ara dönem)</td><td data-h="B1" class=""></td><td data-h="C1" class=""></td><td data-h="D1" class=""></td><td data-h="E1" class=""></td></tr><tr><td class="no">2</td><td data-h="A2" class="i tasar">Aktif (varlıklar) = Pasif (kaynaklar). Dönem kârı Gelir Tablosu&#x27;ndan gelir; resmî yıl sonu bilançosu değildir.</td><td data-h="B2" class=""></td><td data-h="C2" class=""></td><td data-h="D2" class=""></td><td data-h="E2" class=""></td></tr><tr><td class="no">3</td><td data-h="A3" class=""></td><td data-h="B3" class=""></td><td data-h="C3" class=""></td><td data-h="D3" class=""></td><td data-h="E3" class=""></td></tr><tr><td class="no">4</td><td data-h="A4" class="b wrap" style="background:#E8E1D5;text-align:center;height:auto">AKTİF (Varlıklar)</td><td data-h="B4" class="b wrap" style="background:#E8E1D5;text-align:center;height:auto">Tutar</td><td data-h="C4" class="b wrap" style="background:#E8E1D5;text-align:center;height:auto"></td><td data-h="D4" class="b wrap" style="background:#E8E1D5;text-align:center;height:auto">PASİF (Kaynaklar)</td><td data-h="E4" class="b wrap" style="background:#E8E1D5;text-align:center;height:auto">Tutar</td></tr><tr><td class="no">5</td><td data-h="A5" class="b tasar">I. DÖNEN VARLIKLAR</td><td data-h="B5" class=""></td><td data-h="C5" class=""></td><td data-h="D5" class="b tasar">III. KISA VADELİ YABANCI KAYNAKLAR</td><td data-h="E5" class=""></td></tr><tr><td class="no">6</td><td data-h="A6" class="">  Kasa (100)</td><td data-h="B6" class="s">10.400,00</td><td data-h="C6" class=""></td><td data-h="D6" class="">  Satıcılar (320)</td><td data-h="E6" class="s">80.000,00</td></tr><tr><td class="no">7</td><td data-h="A7" class="">  Bankalar (102)</td><td data-h="B7" class="s">157.200,00</td><td data-h="C7" class=""></td><td data-h="D7" class="">  Ödenecek vergi ve fonlar (360)</td><td data-h="E7" class="s">-</td></tr><tr><td class="no">8</td><td data-h="A8" class="">  Alıcılar (120)</td><td data-h="B8" class="s">-</td><td data-h="C8" class=""></td><td data-h="D8" class="">  Hesaplanan KDV (391)</td><td data-h="E8" class="s">-</td></tr><tr><td class="no">9</td><td data-h="A9" class="">  Ticari mallar (153)</td><td data-h="B9" class="s">100.000,00</td><td data-h="C9" class=""></td><td data-h="D9" class="b">  Kısa vadeli yabancı kaynaklar toplamı</td><td data-h="E9" class="s b" style="background:#F4F0E8">80.000,00</td></tr><tr><td class="no">10</td><td data-h="A10" class="">  İndirilecek KDV — devreden (191)</td><td data-h="B10" class="s">35.400,00</td><td data-h="C10" class=""></td><td data-h="D10" class="b tasar">V. ÖZ KAYNAKLAR</td><td data-h="E10" class=""></td></tr><tr><td class="no">11</td><td data-h="A11" class="b">  Dönen varlıklar toplamı</td><td data-h="B11" class="s b" style="background:#F4F0E8">303.000,00</td><td data-h="C11" class=""></td><td data-h="D11" class="">  Sermaye (500)</td><td data-h="E11" class="s">300.000,00</td></tr><tr><td class="no">12</td><td data-h="A12" class="b tasar">II. DURAN VARLIKLAR</td><td data-h="B12" class=""></td><td data-h="C12" class=""></td><td data-h="D12" class="">  Dönem kârı (Gelir Tablosu, vergi öncesi)</td><td data-h="E12" class="s">11.500,00</td></tr><tr><td class="no">13</td><td data-h="A13" class="">  Demirbaşlar (255)</td><td data-h="B13" class="s">90.000,00</td><td data-h="C13" class=""></td><td data-h="D13" class="b">  Öz kaynaklar toplamı</td><td data-h="E13" class="s b" style="background:#F4F0E8">311.500,00</td></tr><tr><td class="no">14</td><td data-h="A14" class="">  Birikmiş amortismanlar (257) (−)</td><td data-h="B14" class="s">(1.500,00)</td><td data-h="C14" class=""></td><td data-h="D14" class=""></td><td data-h="E14" class=""></td></tr><tr><td class="no">15</td><td data-h="A15" class="b">  Duran varlıklar toplamı</td><td data-h="B15" class="s b" style="background:#F4F0E8">88.500,00</td><td data-h="C15" class=""></td><td data-h="D15" class=""></td><td data-h="E15" class=""></td></tr><tr><td class="no">16</td><td data-h="A16" class=""></td><td data-h="B16" class=""></td><td data-h="C16" class=""></td><td data-h="D16" class=""></td><td data-h="E16" class=""></td></tr><tr><td class="no">17</td><td data-h="A17" class="b" style="background:#E8E1D5">AKTİF TOPLAMI</td><td data-h="B17" class="s b" style="background:#E8E1D5">391.500,00</td><td data-h="C17" class=""></td><td data-h="D17" class="b" style="background:#E8E1D5">PASİF TOPLAMI</td><td data-h="E17" class="s b" style="background:#E8E1D5">391.500,00</td></tr><tr><td class="no">18</td><td data-h="A18" class=""></td><td data-h="B18" class=""></td><td data-h="C18" class=""></td><td data-h="D18" class=""></td><td data-h="E18" class=""></td></tr><tr><td class="no">19</td><td data-h="A19" class="b">Kontrol: aktif = pasif</td><td data-h="B19" class="b ok">DENK</td><td data-h="C19" class=""></td><td data-h="D19" class=""></td><td data-h="E19" class=""></td></tr></tbody></table></main>
+<footer>Değerler dosyadaki formüllerin hesaplanmış sonucudur (pycel). Hücreye tıklayın: formül yukarıda görünür. Mali müşavirlik hizmeti değildir.</footer>
+<script>
+const F = {"B6": "=(SUMIF(Mizan!$A$5:$A$40,100,Mizan!$E$5:$E$40)-SUMIF(Mizan!$A$5:$A$40,100,Mizan!$F$5:$F$40))", "E6": "=(SUMIF(Mizan!$A$5:$A$40,320,Mizan!$F$5:$F$40)-SUMIF(Mizan!$A$5:$A$40,320,Mizan!$E$5:$E$40))", "B7": "=(SUMIF(Mizan!$A$5:$A$40,102,Mizan!$E$5:$E$40)-SUMIF(Mizan!$A$5:$A$40,102,Mizan!$F$5:$F$40))", "E7": "=(SUMIF(Mizan!$A$5:$A$40,360,Mizan!$F$5:$F$40)-SUMIF(Mizan!$A$5:$A$40,360,Mizan!$E$5:$E$40))", "B8": "=(SUMIF(Mizan!$A$5:$A$40,120,Mizan!$E$5:$E$40)-SUMIF(Mizan!$A$5:$A$40,120,Mizan!$F$5:$F$40))", "E8": "=(SUMIF(Mizan!$A$5:$A$40,391,Mizan!$F$5:$F$40)-SUMIF(Mizan!$A$5:$A$40,391,Mizan!$E$5:$E$40))", "B9": "=(SUMIF(Mizan!$A$5:$A$40,153,Mizan!$E$5:$E$40)-SUMIF(Mizan!$A$5:$A$40,153,Mizan!$F$5:$F$40))", "E9": "=SUM(E6:E8)", "B10": "=(SUMIF(Mizan!$A$5:$A$40,191,Mizan!$E$5:$E$40)-SUMIF(Mizan!$A$5:$A$40,191,Mizan!$F$5:$F$40))", "B11": "=SUM(B6:B10)", "E11": "=(SUMIF(Mizan!$A$5:$A$40,500,Mizan!$F$5:$F$40)-SUMIF(Mizan!$A$5:$A$40,500,Mizan!$E$5:$E$40))", "E12": "='Gelir Tablosu'!B11", "B13": "=(SUMIF(Mizan!$A$5:$A$40,255,Mizan!$E$5:$E$40)-SUMIF(Mizan!$A$5:$A$40,255,Mizan!$F$5:$F$40))", "E13": "=SUM(E11:E12)", "B14": "=-(SUMIF(Mizan!$A$5:$A$40,257,Mizan!$F$5:$F$40)-SUMIF(Mizan!$A$5:$A$40,257,Mizan!$E$5:$E$40))", "B15": "=SUM(B13:B14)", "B17": "=B11+B15", "E17": "=E9+E13", "B19": "=IF(ROUND(B17-E17,2)=0,\"DENK\",\"DENK DEĞİL\")"};
+const ref = document.getElementById('ref'), icerik = document.getElementById('icerik');
+function sec(td) {
+  document.querySelectorAll('td.sec').forEach(x => x.classList.remove('sec'));
+  td.classList.add('sec'); ref.textContent = td.dataset.h;
+  icerik.textContent = F[td.dataset.h] !== undefined ? F[td.dataset.h] : td.textContent;
+}
+document.querySelectorAll('td[data-h]').forEach(td => td.addEventListener('click', () => sec(td)));
+function kol(s) { let n = 0; for (const c of s) n = n * 26 + c.charCodeAt(0) - 64; return n; }
+const p = new URLSearchParams(location.search);
+if (p.get('vurgu')) {
+  const [a, b] = p.get('vurgu').toUpperCase().split(':'); const m1 = a.match(/([A-Z]+)(\d+)/), m2 = (b || a).match(/([A-Z]+)(\d+)/);
+  const c1 = kol(m1[1]), r1 = +m1[2], c2 = kol(m2[1]), r2 = +m2[2];
+  document.querySelectorAll('td[data-h]').forEach(td => { const m = td.dataset.h.match(/([A-Z]+)(\d+)/);
+    const c = kol(m[1]), r = +m[2]; if (c >= c1 && c <= c2 && r >= r1 && r <= r2) td.classList.add('vurgu'); });
+}
+const hedef = document.querySelector(`td[data-h="${(p.get('sec') || 'A1').toUpperCase()}"]`);
+if (hedef) { sec(hedef); }
+const ilkVurgu = document.querySelector('td.vurgu');
+const kaydir = ilkVurgu || (p.get('sec') ? hedef : null);
+if (kaydir && +kaydir.dataset.h.match(/\d+/)[0] > 18) {
+  document.getElementById('alan').scrollTop = Math.max(0, kaydir.offsetTop - 72);
+}
+</script>
+</body></html>

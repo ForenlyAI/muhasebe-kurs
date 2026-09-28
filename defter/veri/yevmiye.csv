@@ -1,0 +1,38 @@
+madde,tarih,belge,aciklama,hesap,borc,alacak
+1,2026-01-02,Banka dekontu ÖRN-D-001,Ortakların sermaye ödemesi bankaya yatırıldı,102,300000,
+1,2026-01-02,Banka dekontu ÖRN-D-001,Ortakların sermaye ödemesi bankaya yatırıldı,500,,300000
+2,2026-01-03,Banka dekontu ÖRN-D-002,Bankadan kasaya para çekildi,100,20000,
+2,2026-01-03,Banka dekontu ÖRN-D-002,Bankadan kasaya para çekildi,102,,20000
+3,2026-01-06,Alış e-Faturası ÖRN-A-001,Tezgâh ve raf sistemi alındı (demirbaş),255,90000,
+3,2026-01-06,Alış e-Faturası ÖRN-A-001,Tezgâh ve raf sistemi alındı (demirbaş),191,18000,
+3,2026-01-06,Alış e-Faturası ÖRN-A-001,Tezgâh ve raf sistemi alındı (demirbaş),102,,108000
+4,2026-01-06,Alış faturası ÖRN-A-002,Barkod okuyucu alındı — doğrudan gider (had altında),794,8000,
+4,2026-01-06,Alış faturası ÖRN-A-002,Barkod okuyucu alındı — doğrudan gider (had altında),191,1600,
+4,2026-01-06,Alış faturası ÖRN-A-002,Barkod okuyucu alındı — doğrudan gider (had altında),100,,9600
+5,2026-01-10,Alış e-Faturası ÖRN-A-003,Satılmak üzere demleme ekipmanı alındı (vadeli),153,150000,
+5,2026-01-10,Alış e-Faturası ÖRN-A-003,Satılmak üzere demleme ekipmanı alındı (vadeli),191,30000,
+5,2026-01-10,Alış e-Faturası ÖRN-A-003,Satılmak üzere demleme ekipmanı alındı (vadeli),320,,180000
+6,2026-01-15,e-Arşiv faturalar ÖRN-S-001…040,Bireysel müşterilere satışlar (kartla tahsil),102,72000,
+6,2026-01-15,e-Arşiv faturalar ÖRN-S-001…040,Bireysel müşterilere satışlar (kartla tahsil),600,,60000
+6,2026-01-15,e-Arşiv faturalar ÖRN-S-001…040,Bireysel müşterilere satışlar (kartla tahsil),391,,12000
+7,2026-01-20,Satış e-Faturası ÖRN-S-041,Örnek Kafe Ltd.'ye vadeli satış (kurgusal müşteri),120,48000,
+7,2026-01-20,Satış e-Faturası ÖRN-S-041,Örnek Kafe Ltd.'ye vadeli satış (kurgusal müşteri),600,,40000
+7,2026-01-20,Satış e-Faturası ÖRN-S-041,Örnek Kafe Ltd.'ye vadeli satış (kurgusal müşteri),391,,8000
+8,2026-01-25,Alış e-Faturası ÖRN-A-004,Ocak dükkân kirası (kiraya veren şirket),793,25000,
+8,2026-01-25,Alış e-Faturası ÖRN-A-004,Ocak dükkân kirası (kiraya veren şirket),191,5000,
+8,2026-01-25,Alış e-Faturası ÖRN-A-004,Ocak dükkân kirası (kiraya veren şirket),102,,30000
+9,2026-01-28,Alış e-Faturası ÖRN-A-005,Elektrik ve internet faturası,793,4000,
+9,2026-01-28,Alış e-Faturası ÖRN-A-005,Elektrik ve internet faturası,191,800,
+9,2026-01-28,Alış e-Faturası ÖRN-A-005,Elektrik ve internet faturası,102,,4800
+10,2026-01-30,Banka dekontu ÖRN-D-003,Örnek Kafe Ltd.'den tahsilat,102,48000,
+10,2026-01-30,Banka dekontu ÖRN-D-003,Örnek Kafe Ltd.'den tahsilat,120,,48000
+11,2026-01-30,Banka dekontu ÖRN-D-004,Satıcıya kısmi ödeme,320,100000,
+11,2026-01-30,Banka dekontu ÖRN-D-004,Satıcıya kısmi ödeme,102,,100000
+12,2026-01-31,Amortisman tablosu,Ocak ayı amortisman payı (ara dönem),796,1500,
+12,2026-01-31,Amortisman tablosu,Ocak ayı amortisman payı (ara dönem),257,,1500
+13,2026-01-31,Sayım listesi,Ay sonu sayım: satılan malın maliyeti,621,50000,
+13,2026-01-31,Sayım listesi,Ay sonu sayım: satılan malın maliyeti,153,,50000
+14,2026-01-31,Gider dağıtım notu,Gider çeşitleri gelir tablosu hesabına aktarıldı (7/B),632,38500,
+14,2026-01-31,Gider dağıtım notu,Gider çeşitleri gelir tablosu hesabına aktarıldı (7/B),798,,38500
+15,2026-01-31,KDV hesap özeti,Ocak KDV mahsubu (kalan indirilecek KDV devreder),391,20000,
+15,2026-01-31,KDV hesap özeti,Ocak KDV mahsubu (kalan indirilecek KDV devreder),191,,20000

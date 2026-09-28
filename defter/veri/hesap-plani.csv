@@ -1,0 +1,19 @@
+kod,ad,grup,tur,normal
+100,Kasa,1 Dönen Varlıklar,Varlık,Borç
+102,Bankalar,1 Dönen Varlıklar,Varlık,Borç
+120,Alıcılar,1 Dönen Varlıklar,Varlık,Borç
+153,Ticari Mallar,1 Dönen Varlıklar,Varlık,Borç
+191,İndirilecek KDV,1 Dönen Varlıklar,Varlık,Borç
+255,Demirbaşlar,2 Duran Varlıklar,Varlık,Borç
+257,Birikmiş Amortismanlar (-),2 Duran Varlıklar,Varlık (düzenleyici),Alacak
+320,Satıcılar,3 Kısa Vadeli Yabancı Kaynaklar,Kaynak,Alacak
+360,Ödenecek Vergi ve Fonlar,3 Kısa Vadeli Yabancı Kaynaklar,Kaynak,Alacak
+391,Hesaplanan KDV,3 Kısa Vadeli Yabancı Kaynaklar,Kaynak,Alacak
+500,Sermaye,5 Öz Kaynaklar,Kaynak,Alacak
+600,Yurt İçi Satışlar,6 Gelir Tablosu Hesapları,Gelir,Alacak
+621,Satılan Ticari Mallar Maliyeti (-),6 Gelir Tablosu Hesapları,Gider,Borç
+632,Genel Yönetim Giderleri (-),6 Gelir Tablosu Hesapları,Gider,Borç
+793,Dışarıdan Sağlanan Fayda ve Hizmetler,7 Maliyet Hesapları (7/B),Gider çeşidi,Borç
+794,Çeşitli Giderler,7 Maliyet Hesapları (7/B),Gider çeşidi,Borç
+796,Amortismanlar ve Tükenme Payları,7 Maliyet Hesapları (7/B),Gider çeşidi,Borç
+798,Gider Çeşitleri Yansıtma Hesabı,7 Maliyet Hesapları (7/B),Yansıtma,Alacak
