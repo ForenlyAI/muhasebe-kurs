@@ -1,4 +1,4 @@
-# Muhasebe 101 — Lab
+# Operasyon Muhasebesi: Fişten Bilançoya — Lab
 
 Kurs boyunca kullandığımız örnek işletme **Kahve Durağı Ltd. Şti.** tamamen **kurgusaldır**: kahve
 demleme ekipmanı satan küçük bir dükkân. Bu klasörde onun Ocak 2026 defteri gerçek bir elektronik tablo
